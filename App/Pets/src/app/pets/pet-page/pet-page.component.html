@@ -1,0 +1,37 @@
+<div class="row">
+    <div class = "col-6">
+        <div class="row">
+            <div class="col-6">
+                <img src="{{pet.image}}" width="100%" height="400px">
+            </div>
+            <div class="col-6">
+                <h2>{{pet.name | titlecase}}</h2>
+                <p>Category: {{pet.category}}</p>
+                <p>Sex: {{pet.sex == 'f' ? 'Female' : 'Male'}}</p>
+                <p class="card-text">Size: {{pet.size_kg}}kg</p>
+                
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <p>{{pet.story}}</p>
+        </div>
+    </div>
+    <div class = "col-4">
+        <div class="row" class="text-center">
+            <h3>Adopt</h3>
+        </div>
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" name="adoptionName"  placeholder="Enter your full name" [(ngModel)]="adoption.name">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Contact</label>
+                  <input type="text" class="form-control" id="exampleInputPassword1" name="contact" placeholder="Enter your contact info (email/phone)" [(ngModel)]="adoption.contact">
+                </div>
+                <button type="submit" class="btn btn-primary float-right" (click)="submitAdoption()">Submit request</button>
+            </form>
+
+    </div>
+</div>
