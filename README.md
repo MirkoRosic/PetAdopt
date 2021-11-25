@@ -1,1 +1,2 @@
-Angular application from front-end development course
+Angular application for adopting pets
+
